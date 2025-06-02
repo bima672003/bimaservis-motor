@@ -15,4 +15,8 @@ class Pelanggan extends Model
         'nomor_telepon',
         'email',
     ];
+    public function kendaraans()
+    {
+    return $this->hasMany(Kendaraan::class);
+    }
 }

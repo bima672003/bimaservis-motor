@@ -15,4 +15,10 @@ class Kendaraan extends Model
         'jenis_kendaraan',
         'tahun_pembuatan',
     ];
+
+    public function pelanggan()
+    {
+    return $this->belongsTo(Pelanggan::class);
+    }
+
 }

@@ -27,4 +27,15 @@ class TransaksiServis extends Model
     {
         return $this->hasMany(PekerjaanServis::class, 'antrian_id', 'antrian_id');
     }
+
+    public function kendaraan()
+{
+    return $this->belongsTo(Kendaraan::class);
+}
+
+public function layanans()
+{
+    return $this->belongsToMany(Layanan::class, 'layanan_transaksi');
+}
+
 }
