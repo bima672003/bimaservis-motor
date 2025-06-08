@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('metode_pembayaran');
             $table->date('tanggal_pembayaran');
             $table->timestamps();
+            $table->foreignId('layanan_id')->constrained()->onDelete('cascade');
+            $table->foreignId('transaksi_id')->constrained()->onDelete('cascade');
+
         });
     }
 

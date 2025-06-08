@@ -18,3 +18,7 @@ Route::resource('kendaraan', KendaraanController::class);
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pendaftaran-ktp', function () {
+    return 'Selamat datang di halaman Pendaftaran KTP Online';
+})->middleware('check.age');
